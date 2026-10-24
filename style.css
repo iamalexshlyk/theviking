@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    background: linear-gradient(145deg, #1e2a2a 0%, #0f1919 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', 'Courier New', monospace;
+    padding: 20px;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 2rem;
+    padding: 1.5rem;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+    backdrop-filter: blur(3px);
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    color: #f7d44a;
+    text-shadow: 0 4px 0 #7a2e00;
+    margin-bottom: 1.5rem;
+    word-break: keep-all;
+}
+
+/* Показатели */
+.stats {
+    background: #2c1a12e0;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #d4af37;
+    box-shadow: inset 0 0 8px #00000033, 0 5px 10px #00000044;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.stat-label {
+    width: 100px;
+    font-weight: bold;
+    color: #ffefc0;
+    text-shadow: 0 1px 0 #2c1a0e;
+    font-size: 1rem;
+}
+
+.stat-bar {
+    flex: 1;
+    height: 20px;
+    background-color: #3d2a1e;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px #00000066;
+}
+
+.stat-fill {
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, #e0b45a, #ffd966);
+    border-radius: 20px;
+    transition: width 0.3s ease-out;
+    box-shadow: 0 0 4px #ffd58c;
+}
+
+.stat-value {
+    width: 45px;
+    text-align: right;
+    font-weight: bold;
+    color: #f5e2b0;
+    font-size: 0.9rem;
+}
+
+/* Карточка события */
+.card {
+    background: #fef0cf;
+    background-image: radial-gradient(circle at 10% 20%, rgba(210,180,140,0.2) 2%, transparent 2.5%);
+    background-size: 18px 18px;
+    border-radius: 2rem;
+    padding: 1.8rem 1.2rem;
+    text-align: center;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.5), inset 0 1px 2px rgba(255,245,200,0.8);
+    border: 1px solid #ffecb3;
+}
+
+.person-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(2px 6px 6px #00000044);
+}
+
+.event-text {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    font-weight: 600;
+    color: #2b2419;
+    margin: 0.8rem 0 1.5rem;
+    min-height: 80px;
+    padding: 0 8px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.choice-btn {
+    background: #2d2b26;
+    border: none;
+    color: #ffe5b4;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 20px;
+    width: 220px;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: 0.1s linear;
+    box-shadow: 0 6px 0 #12100e;
+    font-family: inherit;
+    letter-spacing: 0.5px;
+}
+
+.choice-btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #12100e;
+}
+
+.left {
+    background: #3c2a1f;
+    border-bottom: 3px solid #b97f44;
+}
+
+.right {
+    background: #1f3a2f;
+    border-bottom: 3px solid #76a05c;
+}
+
+/* Game over */
+.game-over {
+    margin-top: 1.5rem;
+    background: #1e1915e6;
+    backdrop-filter: blur(12px);
+    border-radius: 2rem;
+    padding: 1.5rem;
+    text-align: center;
+    color: #ffcf9a;
+    border: 2px solid #b33f00;
+}
+
+.game-over h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #ff8c5a;
+}
+
+#restart-btn {
+    background: #c2833b;
+    border: none;
+    font-size: 1.2rem;
+    padding: 10px 28px;
+    margin-top: 16px;
+    border-radius: 40px;
+    font-weight: bold;
+    color: #2c1c0c;
+    cursor: pointer;
+    transition: 0.1s linear;
+    box-shadow: 0 5px 0 #6a3c15;
+}
+
+#restart-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #6a3c15;
+}
+
+/* адаптация */
+@media (max-width: 550px) {
+    .container {
+        padding: 1rem;
+    }
+    .choice-btn {
+        width: 100%;
+    }
+    .stat-label {
+        width: 75px;
+        font-size: 0.85rem;
+    }
+    .event-text {
+        font-size: 1.1rem;
+    }
+}

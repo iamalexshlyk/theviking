@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Королевский выбор — игра как Reigns</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>👑 КОРОЛЕВСКИЙ ВЫБОР 👑</h1>
+        <div class="stats">
+            <div class="stat">
+                <span class="stat-label">🏦 Казна</span>
+                <div class="stat-bar"><div class="stat-fill" id="treasury-fill"></div></div>
+                <span class="stat-value" id="treasury-value">50</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">⛪ Религия</span>
+                <div class="stat-bar"><div class="stat-fill" id="religion-fill"></div></div>
+                <span class="stat-value" id="religion-value">50</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">⚔️ Армия</span>
+                <div class="stat-bar"><div class="stat-fill" id="army-fill"></div></div>
+                <span class="stat-value" id="army-value">50</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">👥 Народ</span>
+                <div class="stat-bar"><div class="stat-fill" id="people-fill"></div></div>
+                <span class="stat-value" id="people-value">50</span>
+            </div>
+        </div>
+
+        <div class="card" id="event-card">
+            <div class="person-icon">🧑‍🌾</div>
+            <p class="event-text" id="event-text">Загрузка...</p>
+            <div class="buttons">
+                <button class="choice-btn left" id="choice-left">Выбор А</button>
+                <button class="choice-btn right" id="choice-right">Выбор Б</button>
+            </div>
+        </div>
+
+        <div class="game-over" id="game-over-panel" style="display: none;">
+            <h2>💀 ИГРА ОКОНЧЕНА 💀</h2>
+            <p>Ваше правление подошло к концу. Один из показателей достиг предела.</p>
+            <button id="restart-btn">🔄 НАЧАТЬ ЗАНОВО</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
